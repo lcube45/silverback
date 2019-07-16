@@ -118,9 +118,9 @@ sets the entity display mode that is used for the in-editor preview.
 ### Button
 
 ```html
-<div ck-type="button" link-target="" title="" target="" rel="">
-  <div ck-type="text">Click me!</div>
-</div>
+<ck-button class="ck-button" link-target="" target="" title="" rel="">
+  <div class="text" ck-input="plain">Click me!</div>
+</ck-button>
 ```
 
 Injects a dedicated button element (and in this case a nested text element for
@@ -139,11 +139,18 @@ or `quote` templates and reorder them.
 ### Gallery
 
 ```html
-<div ck-type="gallery" ck-contains="image"></div>
+<ck-gallery ck-contains="image"></ck-gallery>
 ```
 
 Renders a gallery that contains one specific item type and allows the user to add
 an arbitrary number of slides.
+
+#### Available attributes
+
+* `ck-controls-position`: `below`, `above`, `top` (default: bottom)
+* `ck-contains`
+* `ck-current-item`
+* `ck-max`
 
 ### Tabs
 
@@ -292,7 +299,7 @@ composer require drupal/ckeditor5_sections:"8.x-1.x-dev as 1.0"
 
 See [Composer documentation](https://getcomposer.org/doc/articles/aliases.md#require-inline-alias) for more information on using aliases.
 
-### CKEditor5 packages
+### CKEditor5 packages (!!!deprecated)
 
 Apart from the packages provided by CKSource, this module uses three packages
 maintained by Amazee Labs:
